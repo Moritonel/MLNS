@@ -1,2 +1,46 @@
-# MLNS
-Moris local Network Scanner
+# MORIS LOCAL NETWORK SCANNER
+## Video Demo:  <URL HERE>
+## Description:
+### Introduction
+My Nickname is Mick and I'm from Germany. 
+I decided to make a small local network scanner. 
+
+### Dependencies
+Python libs: argparse, logging, socket, subprocess, ipaddress, sys, concurrent.futures
+3rd party libs: scapy, pyfiglet
+
+### Installation
+install pcap
+Link: https://npcap.com/#download
+pip install -r requirements.txt
+
+### Usage
+How to use my tool
+
+
+### Scanning Techniques
+scan - using scapy lib
+port - using scapy to search for open ports
+old - using windows command
+
+
+### Output Format
+terminal only
+
+
+### Error handling
+using logging lib to document errors and saving them in an error.log
+
+
+### Licenses
+no clue for now^^
+
+
+### Acknowledgments
+-cs50p 
+-google
+-ChatGPT
+
+
+### Future Improvements
+-supporting more operating system for os terminal scans
