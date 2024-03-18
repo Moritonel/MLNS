@@ -2,8 +2,9 @@
 ## Video Demo:  <URL HERE>
 ## Description:
 ### Introduction
-My Nickname is Mick and I'm from Germany. 
-I decided to make a small local network scanner. 
+This project uses the [Scapy](https://pypi.org/project/scapy-python3/) Library to scan the local Network and find connected Devices. 
+ 
+
 
 ### Dependencies
 Python libs: argparse, logging, socket, subprocess, ipaddress, sys, concurrent.futures
