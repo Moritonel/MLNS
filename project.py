@@ -123,7 +123,6 @@ class LocalNetworkScanner:
                     self._dict_of_ports.update({port: "closed"})
             else:
                 self._dict_of_ports.update({port: "filtered or closed"}) 
-                logging.getLogger(__name__).exception(f"Port Worker response: {response}")
             # response is none and has no TCP layer means 
             # no answer at all, filtered or maybe unknown Errors 
 
