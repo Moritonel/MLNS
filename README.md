@@ -15,8 +15,15 @@ install pcap
 Link: https://npcap.com/#download
 pip install -r requirements.txt
 
-### Usage
-How to use my tool
+### Usage 
+python project.py --scan 192.168.178.1
+
+![--scan](https://github.com/Moritonel/MLNS/assets/30255838/35b7abc4-8f00-4afd-a99f-6d12de780e4f)
+
+
+
+
+
 
 
 ### Scanning Techniques
