@@ -72,4 +72,6 @@ port - The port argument starts a port scan using the [Scapy](https://pypi.org/p
 
 
 ### Future Improvements
--supporting more operating system for os terminal scans
+- [ ] adding more pytests
+- [ ] supporting linux for os terminal scans (--old)
+
