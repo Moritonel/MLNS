@@ -16,17 +16,15 @@ Link: https://npcap.com/#download
 pip install -r requirements.txt
 
 ### Usage 
-python project.py --scan 192.168.178.1
-
-`
+```
 python project.py --scan 192.168.178.1
 +-+-+-+-+ +-+-+-+-+-+-+-+
 |S|C|A|N| |S|T|A|R|T|E|D|
 +-+-+-+-+ +-+-+-+-+-+-+-+
 This takes a few seconds...
-IP Adress: 192.168.178.1   MAC Adress: dc:15:c8:d9:e4:9c Device Name: fritz.box
-IP Adress: 192.168.178.20  MAC Adress: d0:50:99:3b:8e:50 Device Name: DESKTOP-TPT7DKC.fritz.box
-`
+IP Adress: 192.168.178.1   MAC Adress: 00:00:00:00:00:00 Device Name: fritz.box
+IP Adress: 192.168.178.20  MAC Adress: 00:00:00:00:00:00 Device Name: DESKTOP-TPT7DKC.fritz.box
+```
 
 
 
