@@ -15,10 +15,12 @@ Because we have to ping every ip seperate with windows commands, we use ThreadPo
 The port_scan() method uses the Scapy Lib to create a network packet with an IP and TCP Layer. With the help of the sr1 function we sending that packet to around 1000 port possibilites and filtere between open, closed or filtered. After that we save the ports in a dict and only post open ports.
 
 We use logging to log errors, mostly for learning purpose.
-We use Figlet to format our output in a cool way :stuck_out_tongue_winking_eye:
-We validate IP Adresses with the ipadress lib.
-To be able to use command parameters with use the argparse lib.
 
+We use Figlet to format our output in a cool way :stuck_out_tongue_winking_eye:
+
+We validate IP Adresses with the ipadress lib.
+
+To be able to use command parameters with use the argparse lib.
 
 ### Dependencies
 Python libs: argparse, logging, socket, subprocess, ipaddress, sys, concurrent.futures
