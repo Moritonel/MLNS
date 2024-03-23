@@ -1,9 +1,9 @@
 # MORIS LOCAL NETWORK SCANNER
 ## Video Demo:  <URL HERE>
-## Description:
+## Description
 ### Introduction
 This project uses the [Scapy](https://pypi.org/project/scapy-python3/) Library to scan the local Network and find connected Devices. 
- 
+
 ### Dependencies
 Python libs: argparse, logging, socket, subprocess, ipaddress, sys, concurrent.futures
 
@@ -58,27 +58,12 @@ Port: 443 is open
 Port: 554 is open
 ```
 
-
-
 ### Scanning Techniques
-scan - using scapy lib
+scan - The scan argument starts a scan using the [Scapy](https://pypi.org/project/scapy-python3/) Library.
 
-port - using scapy to search for open ports
+old  - The old argument starts a scan using the windows terminal.
 
-old - using windows command
-
-
-### Output Format
-terminal only
-
-
-### Error handling
-using logging lib to document errors and saving them in an error.log
-
-
-### Licenses
-no clue for now^^
-
+port - The port argument starts a port scan using the [Scapy](https://pypi.org/project/scapy-python3/) Library.
 
 ### Acknowledgments
 -cs50p 
