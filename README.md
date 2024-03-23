@@ -4,10 +4,9 @@
 ### Introduction
 This project uses the [Scapy](https://pypi.org/project/scapy-python3/) Library to scan the local Network and find connected Devices. 
  
-
-
 ### Dependencies
 Python libs: argparse, logging, socket, subprocess, ipaddress, sys, concurrent.futures
+
 3rd party libs: scapy, pyfiglet
 
 ### Installation
@@ -16,8 +15,8 @@ Link: https://npcap.com/#download
 pip install -r requirements.txt
 
 ### Usage 
+**python project.py --scan 192.168.178.1**
 ```
-python project.py --scan 192.168.178.1
 +-+-+-+-+ +-+-+-+-+-+-+-+
 |S|C|A|N| |S|T|A|R|T|E|D|
 +-+-+-+-+ +-+-+-+-+-+-+-+
@@ -25,16 +24,35 @@ This takes a few seconds...
 IP Adress: 192.168.178.1   MAC Adress: 00:00:00:00:00:00 Device Name: fritz.box
 IP Adress: 192.168.178.20  MAC Adress: 00:00:00:00:00:00 Device Name: DESKTOP-TPT7DKC.fritz.box
 ```
-
-
-
-
+**python project.py --old 192.168.178.1**
+```
++-+-+-+-+ +-+-+-+-+-+-+-+
+|S|C|A|N| |S|T|A|R|T|E|D|
++-+-+-+-+ +-+-+-+-+-+-+-+
+This takes a few seconds...
++-+-+-+-+-+ +-+-+-+-+-+-+-+
+|F|O|U|N|D| |D|E|V|I|C|E|S|
++-+-+-+-+-+ +-+-+-+-+-+-+-+
+IP Adress: 192.168.178.1  
+IP Adress: 192.168.178.20 
+IP Adress: 192.168.178.23 
+```
+**python project.py --port  192.168.178.1**
+```
+This takes a few seconds...
+Port: 53 is open
+Port: 80 is open 
+Port: 443 is open
+Port: 554 is open
+```
 
 
 
 ### Scanning Techniques
 scan - using scapy lib
+
 port - using scapy to search for open ports
+
 old - using windows command
 
 
