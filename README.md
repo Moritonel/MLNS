@@ -15,6 +15,18 @@ Link: https://npcap.com/#download
 pip install -r requirements.txt
 
 ### Usage 
+**python project.py --help**
+```
+usage: project.py [-h] [--scan SCAN] [--old OLD] [--port PORT]
+
+Moris Local Network Scanner
+
+options:
+  -h, --help   show this help message and exit
+  --scan SCAN  Target IP Range - Example: 192.168.178.0/24
+  --old OLD    Target IP Range - Example: 192.168.178.0/24 using windows commands
+  --port PORT  Target IP for Port Scan - Example: 192.168.178.20
+```
 **python project.py --scan 192.168.178.1**
 ```
 +-+-+-+-+ +-+-+-+-+-+-+-+
