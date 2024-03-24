@@ -20,7 +20,7 @@ We use Figlet to format our output in a cool way :stuck_out_tongue_winking_eye:
 
 We validate IP Addresses with the ipaddress lib.
 
-To be able to use command parameters, use the argparse lib.
+To be able to use command parameters, we use the argparse lib.
 
 ### Dependencies
 Python libs: argparse, logging, socket, subprocess, ipaddress, sys, concurrent.futures
