@@ -28,7 +28,7 @@ Python libs: argparse, logging, socket, subprocess, ipaddress, sys, concurrent.f
 3rd party libs: scapy, pyfiglet
 
 ### Installation
-install [PCAP](https://npcap.com/#download)
+install [Npcap](https://npcap.com/#download)
 
 pip install -r requirements.txt
 
