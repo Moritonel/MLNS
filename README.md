@@ -6,7 +6,7 @@ The Class LocalNetworkScanner has several methods to utilize the [Scapy](https:/
 
 We create a Network Package with an ARP and Ether Layer. With the help of the srp function, from the Scapy Lib, we're sending that Package to ALL available devices on the network using the broadcast address. 
 
-The srp() function returns a lot of Information, but we only need the IP Address and MAC Address, which we save in a dict.
+The srp() function returns a lot of Information, but we only need the IP Address and MAC Address, which we save in a dictionary.
 The get_host_name() method uses the IP Address to get the Device name.
 
 The class can also scan the network using the ping_sweep() method, which uses the subprocess lib to utilize Windows commands.
