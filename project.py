@@ -140,7 +140,7 @@ class LocalNetworkScanner:
     # type: -> Str
 
 def log_file_creater():
-    # looging is used rarly and omplemented for learning purpose
+    # looging is used rarly and mainly for learning purpose
     # this function creates a logger obj and formats the output 
     logger = logging.getLogger(__name__)
     file_handler = logging.FileHandler("errors.log")
@@ -167,6 +167,7 @@ def get_args():
     parser.add_argument("--scan", dest="scan", help="Target IP Range - Example: 192.168.178.0/24")
     parser.add_argument("--old", dest="old", help="Target IP Range - Example: 192.168.178.0/24 using windows commands")
     parser.add_argument("--port", dest="port", help="Target IP for Port Scan - Example: 192.168.178.20")
+    parser.add_argument("--mask", dest="mask", help="runs all functions like the main args, but doesn't print any real data")
     return parser.parse_args()
 # type: -> Namespace
 
@@ -217,6 +218,10 @@ def main():
                 print(f"Port: {port} is {status}")
             elif status == "filtered or closed":
                 print(f"Port: {port} is {status}")
+
+    elif args.mask:
+        ...
+    
 
 
     else:
