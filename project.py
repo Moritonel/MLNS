@@ -166,7 +166,7 @@ def get_args():
     parser.add_argument("--scan", dest="scan", help="Target IP Range - Example: 192.168.178.0/24")
     parser.add_argument("--old", dest="old", help="Target IP Range - Example: 192.168.178.0/24 using windows commands")
     parser.add_argument("--port", dest="port", help="Target IP for Port Scan - Example: 192.168.178.20")
-    parser.add_argument("--anonymize", dest="mask", help="runs all functions like the main args, but doesn't print any real data")
+    parser.add_argument("--anonymize", dest="anonymize", help="runs all functions like the main args, but doesn't print any real data")
     return parser.parse_args()
 # type: -> Namespace
 
