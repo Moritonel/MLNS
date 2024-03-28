@@ -52,8 +52,7 @@ class LocalNetworkScanner:
         
         except PermissionError as pe:
             logging.getLogger(__name__).exception(f"Exception: {pe} type: {type(pe)}")
-            exit("Permission Error! See error.log for more info. Tool is exiting")
-            
+            exit("Permission Error! See error.log for more info. Tool is exiting")          
     # type: -> Dict
 
     
@@ -66,8 +65,7 @@ class LocalNetworkScanner:
         
         except socket.error as se:
            logging.getLogger(__name__).exception(f"Exception: {se} type: {type(se)}")
-           return "Hostname not found"
-
+           return "Hostname not found"          
     # type: -> Str
 
 
