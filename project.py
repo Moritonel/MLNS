@@ -62,10 +62,12 @@ class LocalNetworkScanner:
         try:
             self._host_info = socket.gethostbyaddr(ip)
             self._host_name = self._host_info[0]
+            return self._host_name
+        
         except socket.error as se:
            logging.getLogger(__name__).exception(f"Exception: {se} type: {type(se)}")
+           return "Hostname not found"
 
-        return self._host_name
     # type: -> Str
 
 
