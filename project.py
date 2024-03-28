@@ -88,7 +88,6 @@ class LocalNetworkScanner:
             self._list_of_devices.append(ip_adress)
             # adds ip adress if there is no error
         except subprocess.CalledProcessError as pe: 
-            logging.getLogger(__name__).exception(f"Exception: {pe} type: {type(pe)}")
             # if there is an error it doesnt add the ip (not getting an answer counts as error)
             pass
             
