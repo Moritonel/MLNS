@@ -95,6 +95,7 @@ class LocalNetworkScanner:
 
 
     def port_scan(self, min_port=1, max_port=1025):
+        # for now we only scan the first 1025 ports to include mostly used ports and save time
         with ThreadPoolExecutor(max_workers=50) as executor:
             # using threads to speed up scan (otherwise takes minutes)
             for port in range(min_port, max_port):
