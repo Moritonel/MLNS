@@ -167,7 +167,7 @@ def get_args():
     parser.add_argument("--scan", dest="scan", help="Target IP Range - Example: 192.168.178.0/24")
     parser.add_argument("--old", dest="old", help="Target IP Range - Example: 192.168.178.0/24 using windows commands")
     parser.add_argument("--port", dest="port", help="Target IP for Port Scan - Example: 192.168.178.20")
-    parser.add_argument("--anonymize", dest="anonymize", help="runs all functions like the main args, but doesn't print any real data")
+    parser.add_argument("-a", "-anonymize", dest="anonymize", action="store_true", help="runs all functions like the main args, but doesn't print any real data")
     return parser.parse_args()
 # type: -> Namespace
 
@@ -186,7 +186,10 @@ def main():
         results = scanner.scan()
         for ip, mac in results.items():
             if ip_check(ip) == True:
-                print(f"IP Adress: {ip: <15} MAC Adress: {mac} Device Name: {scanner.get_host_name(ip)}")
+                if args.anonymize == True:
+                    print("IP Adress: 123.123.123.123 MAC Adress: 00:00:00:00:00:00 Device Name: Not a real Host")
+                else:    
+                    print(f"IP Adress: {ip: <15} MAC Adress: {mac} Device Name: {scanner.get_host_name(ip)}")
             else:
                 print(f"Invalid IP: {ip}")
                       
@@ -204,7 +207,10 @@ def main():
 
         print(figlet.renderText(f"FOUND DEVICES"), end="")
         for ip in devices:
-            print(f"IP Adress: {ip: <15}")
+            if args.anonymize == True:
+                print(f"IP Adress: 123.123.123.123")
+            else:
+                print(f"IP Adress: {ip: <15}")
 
     elif args.port:
         # port scan using scapy
@@ -213,16 +219,14 @@ def main():
         scanner.port_scan()
         sorted_ports: dict = dict(sorted(scanner._dict_of_ports.items(), key=lambda x: x[0]))
         # dict contains open, closed and filtered or closed ports using the port as sorting key
-        for port, status in sorted_ports.items():
-            if status == "open":
-                print(f"Port: {port} is {status}")
-            elif status == "filtered or closed":
-                print(f"Port: {port} is {status}")
-
-    elif args.anonymize:
-        ...
-    
-
+        if args.anonymize == True:
+                print("Data anonymized \nPort: 1 is open \nPort: 2 is closed \nPort: 3 is closed \nPort: 4 is open")
+        else:        
+            for port, status in sorted_ports.items():
+                if status == "open":
+                    print(f"Port: {port} is {status}")
+                elif status == "filtered or closed":
+                    print(f"Port: {port} is {status}")
 
     else:
         # if no args are given asking for user input and using the same scans like the args version
