@@ -19,20 +19,12 @@ def test__init__():
     assert isinstance(scanner._scapy_ether, Ether)
     #tests to assert Scapy ARP and Ether objects are initialized
 
-def test_invaild_ip_adress():
+def test_ip_check():
     with pytest.raises(RuntimeError, match=r"Invalid IP Address issued: .*"):
         LocalNetworkScanner(target_ip="invalid_ip_adress")
 
-def test_logger_creation():
+def test_log_file_creater():
     log_file_creater()
     logger = logging.getLogger(__name__)
     assert logger.name == __name__
 
-def test_scapy_scan():
-    ...
-
-def test_windows_scan():
-    ...
-
-def test_port_scan():
-    ...
