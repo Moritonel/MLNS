@@ -86,11 +86,11 @@ port - The port argument starts a port scan using the [Scapy](https://pypi.org/p
 ### Acknowledgments
 -cs50p 
 
--google
+-google and other searchengines
 
--ChatGPT
+-ChatGPT (only for Explanations)
 
--Kurt 
+-Kurt (best Dude ever)
 
 
 ### Future Improvements
